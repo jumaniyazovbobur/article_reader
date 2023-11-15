@@ -31,7 +31,7 @@ public class ArticleReader {
 
     public static void main(String[] args) throws IOException, URISyntaxException {
         Document doc = Jsoup.parse(readFromFile("input.txt"));
-        String baseUrl = "https://medium.com/";
+        String baseUrl = "https://climbing-day-b99.notion.site/";
         StringBuilder result = printAllText(doc, baseUrl);
         writeToHtml(result);
     }

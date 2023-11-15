@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css">
+    <style>
+        .code_pre {
+            border-radius: 6px;
+        }
+
+        .code_code {
+            padding-top: 10px;
+            padding-left: 10px
+        }
+
+        blockquote {
+            font-family: CustomSerif, Georgia, Cambria, 'Times New Roman', serif;
+            margin: 18px 21px 16px 0;
+            padding-left: 15px;
+            position: relative;
+            font-style: italic;
+            word-wrap: break-word;
+            border-left: 3px solid #000;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="container-fluid">
+
+    <br>
+    <h1 class="text-center">Java Printf </h1>
+    <hr/>
+    <br>
+    <p>Bu maqolada prinf haqida gaplashamiz.</p>
+    <p>Juda oddiy va sondda constructorlar o'zinigz bitta numuna qilib ko'ring. Shoshib kalla qo'yib qo'ymang.</p>
+    <br>
+    <div class="text-center">
+        <img src="https://api.dasturjon.uz/api/v1/attach/image/6c33aca3-3b0e-4ae9-b050-b841b90536ff" alt="">
+        <p>Test Image</p>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <h2>Byte Methods</h2>
+    <p><code>Float</code> classida double tipi bilan ishlashni yengillashtiradigan metodlari bor. Ular: </p>
+    <div style="justify-content: center; display: flex;">
+        <table style="width: 70%;" class="table table-bordered  table-striped ">
+            <thead>
+            <tr>
+                <th>№</th>
+                <th>Method</th>
+                <th>Description (tariff)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="width: 4%">1</td>
+                <td style="width: 50%">
+                    public int compareTo(Byte anotherByte)
+                </td>
+                <td> Hozirgi Double classi ob'ekti bilan berilgan <code>anotherByte</code> ni solish tirish uchun
+                    ishlatiladi. <br>
+                    Agar hozirgi ob'ekt qiymati berilgan <code>anotherByte</code> dan katta bo'lsa musbat son return
+                    qiladi.
+                    <br> Agar hozirgi ob'ekt qiymati berilgan <code>anotherByte</code> dan kichik bo'lsa manfiy son
+                    return qiladi.
+                    <br> Agar hozirgi ob'ekt qiymati berilgan <code>anotherByte</code> ga teng bo'lsa 0 return
+                    qiladi.
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p></p>
+    <br>
+    <p>Namuna 2.</p>
+    <pre class="code_pre"><code class="code_code java" data-highlight="true"> public static void main(String[] args) {
+        Byte a = 12d;
+        Byte b = 53d;
+
+        int r = Byte.compare(a, b);
+        if (r &gt;= 1) {
+            System.out.println("A katta");
+        } else if (r &lt;= -1) {
+            System.out.println("B katta");
+        } else {
+            System.out.println("Ular teng.");
+        }
+    }
+}</code></pre>
+
+
+    <pre class="code_pre">
+    <code class="code_code htmlmixed" data-highlight="true">
+   Bu bizda qandaydir katta teks. Umuman manoga ega bo'lmagan teks. Namuna uchun yozilgan teks.
+</code>
+</pre>
+
+
+    <br>
+    <p>Natija</p>
+    <div style="background: #eee; border: 1px solid #d6d6d6; padding: 7px; border-radius: 5px;">
+        B katta
+    </div>
+    <br>
+    <p>Namunada <code>Float</code> classining <code>compare</code> metodi orqali sonlar solishtirildi.</p>
+    <br>
+
+
+
+    <p><a href="https://t.me/jakhongir_soataliev" target="_blank">Avtor Telegram kanal</a></p>
+    <p><a href="https://medium.com/@soataliyevj/acid-tamoyillari-kirish-153a2a1eed5" target="_blank">Maqolaning asl
+        nushasi.</a></p>
+    <p><b>Moderator</b>: Ali aliyev</p>
+
+
+
+    <br>
+    <br>
+    <br>
+
+</div>
+
+</body>
+</html>
+
+
+<script>
+    // first, find all the div.code blocks
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre code').forEach((el) => {
+            hljs.highlightAll(el);
+        });
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>

@@ -23,445 +23,316 @@
         font-style: italic;
         word-wrap: break-word;
         border-left: 3px solid #000;
-    }    </style>
+    }
+    .code_pre {
+        border-radius: 6px;
+    }
+
+    .code_code {
+        padding-top: 10px;
+        padding-left: 10px
+    }
+
+    .code_pre_wrapper {
+        background-color: #e0e0e0;
+        padding: 15px 20px;
+        border-radius: 5px;
+    }
+
+    .code_pre_open_in_new {
+        text-decoration: none;
+        padding: 8px 25px;
+        background-color: #269864;
+        color: white;
+        border-radius: 7px;
+        border: none;
+
+    }
+
+    .code_pre_open_in_new:hover {
+        background-color: #1b7c50;
+        text-decoration: none;
+        color: white;
+    }
+
+    .code_pre_title {
+        padding-bottom: 5px;
+    }
+
+    </style>
+
 </head>
 <body>
+
 <div class="container-fluid">
-    <div class="container-fluid">
-        <br>
-        <h1 class="text-center">Spring Data Jpa bilan ishlashni optimallashtirish</h1>
-        <br>
-        <div class="text-center">
-            <img alt="" class="bg zu zv c" width="642" height="327" loading="eager" role="presentation"
-                 src="https://miro.medium.com/v2/resize:fit:803/1*KXWmaJmQauJ1gRhSMS1J5w.png">
-        </div>
-        <br>
-        <p>Keling bugun sizlar bilan Spring Data Jpa va undan qanday samarali foydalanish haqida gaplashamiz.
-            <br>
-            Zamonaviy dasturiy ta'minotni ishlab chiqish sohasida ma'lumotlar bazalarini boshqarish va ular
-            bilan ishlash juda muhim vazifadir va Spring Data JPA mana shunday vazifalarni bajarish uchun kuchli yechim
-            sifatida paydo bo'ldi.
-            Biroq, har qanday vositada bo'lgani kabi, dasturning to'gri ishlashi va samaradorlikka erishish uchun Spring
-            Data JPA-dan to'g'ri foydalanish muhimdir.
-            <br>
-            Spring Data JPA bilan ishlashda ma'lumotlar bazasining o'zaro ta'siri samaradorligini oshirish, keraksiz
-            so'rovlarni kamaytirish
-            va ma'lumotlarni qidirish va manipulyatsiyani optimallashtirishga qaratilgan bir nechta strategiyalar mavjud.
-            Spring Data JPA dan
-            foydalanib to'gri va samarali kod yozish uchun seniorlar(&#128512;) tomonidan tafsiya etilgan ba'zi
-            maslahatlarni ko'rib chiqsak.</p>
-        <br>
-        <h1><strong>1. Use Proper Indexing:</strong></h1>
-        <p> Indekslashdan to'g'ri foydalanish</p>
-        <br>
-        <li id="65da" data-selectable-paragraph="">Malumotlar bazasiga yuborilayotgan so'rovlarni tahlil qiling va WHERE,
-            JOIN, ORDER BY bandlarida tez-tez
-            ishlatiladigan ustunlarni aniqlang. Malumotlarni qidirishni tezlashtirish uchun ushbu ustunlarda indekslar
-            yarating.
-        </li>
-        <li id="e86b" data-selectable-paragraph="">Haddan tashqari indekslashdan qoching, Chunki bu malumotlarni qo'shish va
-            o'zgartirish
-            samaradorligiga salbiy qilishi mumkin. Har safar yangi malumot qo'shilganda yoki mavjud malumot o'zgartirilganda
-            avval indekslangan ustunlar
-            qaytadan indekslanadi va bu o'z-o'zidan so'rovlar bajarilishida ko'p vaqt talab qiladi va dastur samaradorligini
-            pasaytiradi.
-            Shuning uchun malumotlarni o'qish va yozish o'rtasida muozanatni saqlash muhimdir.
-        </li>
-        <br>
-        <p>Keling endi shularga bir namuna ko'rsak:</p>
-        <p>Aytaylik, bizda kitoblar va ularning mualliflari haqidagi malumotlarni o'z ichiga olgan malumotlar bazasi bilan
-            ishlash uchun Jpa-dan foydalanadigan ilova mavjud.
-            Bizda ikkita asosiy ob'ekt bor: <code>Book</code> va <code>Author</code>.
-            <br>
-            <br>
-        <pre class="code_pre"><code class="code_code java" data-highlight="true">@Entity
-public class Book {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    <br>
+    <h1 style="text-align: center;">CSS Margins</h1>
+    <br>
 
-    private String title;
-    private String isbn;
+    <p><span class="color_h1">Margin so'zini chegara deb tarjima qilsak bo'ladi.</span></p>
+    <p><span class="color_h1"><code>margin</code> xususiyati orqali element atrofida bo'sh joylar hosil qilish mumkin. Bo'sh joylar element borderidan tashqarida bo'ladi.<br>Demak margin elementning bo'rderi va boshqa elementlar orasidagi masofa desak bo'ladi.&nbsp;</span>
+    </p>
+    <div class="text-center">
+        <img
+                src="https://api.dasturjon.uz/api/v1/attach/image/2020-07-15-17-08-57.png" alt=""
+                width="35%">
+        <p>Margin xususiyati</p>
+    </div>
+    <br>
+    <p><span class="color_h1">Rasmda <code>margin</code> aniq qilib bo'yab qo'yilgan <code>margin</code> border-dan boshlab boshqa bitta elementgacha bo'lgan joy hisoblanadi.</span>
+    </p>
+    <p>Css orqali elementning <code>margin</code> xususiyatini to'liq boshqarish mumkin.<br>Berilgan
+        (top,right,bottom,left)&nbsp;
+        xususiyatlardan foydalanib&nbsp; elementning xohlagan tomoniga&nbsp; <code>margin</code> (bo'sh joy) bersak
+        bo'ladi.&nbsp;
+    </p>
+    <ul>
+        <li><code>top</code> - tepa. Elementning tepa qismi</li>
+        <li><code>right</code> - o'ng. Elementning o'ng qismi</li>
+        <li><code>bottom</code> - past. Elementning past qismi</li>
+        <li><code>left</code> - chap. Elementning chap qismi.&nbsp;</li>
+    </ul>
+    <div class="text-center">
+        <img src="https://api.dasturjon.uz/api/v1/attach/image/2020-07-16-00-40-14.png" alt="" width="35%">
+    </div>
+    <br>
+    <br>
+    <hr>
+    <h2>Margin alohida tomonlar uchun</h2>
+    <p>Css da elementning har bir tomoniga margin qiymat berish uchun xususiyatlar bor.&nbsp;</p>
+    <ul>
+        <li><code>margin-top</code>. tepa tomon margin qiymati</li>
+        <li><code>margin-right</code>. chap tomon margin qiymati.</li>
+        <li><span style="background-color: #c2e0f4;">&nbsp;margin-bottom </span>.&nbsp; past tomon margin qiymati.</li>
+        <li><span style="background-color: #c2e0f4;">&nbsp;margin-left </span>. chap tomon margin qiymati</li>
+    </ul>
+    <p>&nbsp;</p>
+    <p>Barcha margin xususiyatlari quyidagi qiymatlarni olishi mumkin</p>
+    <ul>
+        <li>auto&nbsp; - brauser ni o'zi avtomatik ravishda hisoblaydi.&nbsp;</li>
+        <li>length - son ko'rinishida qandaydir qiymat. Qiymat px,em,pt,rem va k.h lar ko'rinishida bo'lishi mumkin.
+        </li>
+        <li>% -&nbsp; foiz ko'rinishidagi qiymati.</li>
+        <li>inherit -&nbsp; ( inherit nasil olish deb tarjima qilinadi). Ma'nosi shu elementning ota&nbsp; elementidan&nbsp;
+            qandaydir&nbsp; xususiyat qiymatini o'zlashtirib oladi. Ya'ni ota elementning margini&nbsp; kabi birxil
+            bo'ladi.&nbsp;
+        </li>
+    </ul>
+    <p>Qiymat o'rnida manfiy son ham bo'lishi mumkin.</p>
 
-    @ManyToOne
-    @JoinColumn(name = "author_id")
-    private Author author;
-    // Constructors, getters, setters
+    <div class="code_pre_wrapper">
+        <h4 class="code_pre_title">Namuna</h4>
+        <pre class="code_pre"><code class="code_code htmlmixed"
+                                    data-highlight="true">.marginTest {
+            margin-top: 50px;
+            margin-bottom: 120px;
+            margin-right: 150px;
+            margin-left: 80px;
+
+            background-color: #33e684;
+            border: 1px solid black;
  }
 
 
-@Entity
-public class Author {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String name;
-    // Constructors, getters, setters
-}</code></pre>
-        <p>.Aytaylik, biz tez-tez malum bir avtorning barcha kitoblarini olish uchun so'rov bajaramiz. Hech qanday indeksdan
-            foydalanilmagan holatda,
-            malumotlar bazasi mos keladigan qatorlarni topish uchun butun <code>Book</code> tablitsani aylanib chiqish kerak
-            bo'ladi va bu tablitsaga yangi
-            malumot qoshilganda sekin ishlashni boshlashi mumkin.
-        </p>
-        <p>Bu muammoni hal qilishimiz uchun avtorni qidirish uchun foydalaniladigan <code>Book</code> tablitsamizdagi <code>author_id</code>
-            ustuniga indeks
-            qo'shishimiz mumkin.
-        </p>
-        <br>
-        <pre class="code_pre"><code class="code_code java" data-highlight="true">@Entity
-public class Book {
-
-    @ManyToOne
-    @JoinColumn(name = "author_id")
-    @org.hibernate.annotations.Index(name = "author_id_index") // Adding an index
-    private Author author;
-      }</code></pre>
-        <p>Ushbu indeksni yaratish orqali ma'lum bir muallifning kitoblarini qidirish ancha tezlashadi, chunki ma'lumotlar
-            bazasi
-            indekslangan ustun asosida tegishli qatorlarni tezda topishi mumkin.</p>
-        <p>Esda tutingki, indekslash so‘rovlar unumdorligini sezilarli darajada oshirishi mumkin bo‘lsa-da, indeksni oshirib
-            yubormaslik muhim,
-            chunki indekslar saqlash va yangilash unumdorligi nuqtai nazaridan biroz qo‘shimcha vaqt talab qiladi.
-            Ilovangizning so'rov
-            namunalarini tahlil qilishingiz va tez-tez so'raladigan yoki join qilishda ishtirok etadigan ustunlar bo'yicha
-            indekslarni yaratishingiz kerak.</p>
-        <p>Xulosa qilib aytganda, Spring Boot JPA da "Indekslashdan to'gri foydalanish" so'rovlar ishlashini
-            optimallashtirish uchun tez-tez
-            so'raladigan ma'lumotlar bazasi ustunlariga indekslarni qo'shishni o'z ichiga oladi. Ushbu amaliyot ilovalarning
-            javob berish
-            qobiliyati va foydalanuvchi tajribasida sezilarli yaxshilanishlarga olib kelishi mumkin.</p>
-        <br>
-        <h1>2.<strong> Fetch Strategies:</strong></h1>
-        <p>Bog'langan ob'ektlarni olib kelish</p>
-        <br>
-        <p>“Fetch strategy” bunda malumotlar bazasidan ob'ektni so'raganda unga bog'liq bo'lgan ob'ektlarni ham olib kelish
-            tushuniladi.
-            Bu strategiya tegishli ob'ektni <code>eager</code> (shoshilinch) yoki <code>lazy</code> (dangasalik)
-            bilan yuklashni belgilaydi.</p>
-        <li id="e243" data-selectable-paragraph="">Bizga agar yuklanayotgan ob'ektning ichidagi bog'langan ob'ektlarini
-            yuklanishi kerak
-            bo'lmasa ya'ni malumotlar bazasidan bu ob'ektni olib kelish muhim bo'lmasa kerakli
-            "Fetch strategy" (<code>FetchType.LAZY</code>) ni qo'llashimiz mumkin. Bu bilan yuklash uchun ketadigan vaqtni
-            tejaymiz.
-        </li>
-        <li id="e244" data-selectable-paragraph=""> Tegishli ob'ektlar zarur bo'lgan holatda esa biz uni bitta so'rovda olishimiz uchun <code>FetchType.EAGER</code> ni
-            qo'llashimiz mumkin.
-            <br></br>
-            <p>Keling endi namuna ko'rsak:
-                <br>
-                Bizda <code>Author</code> va <code>Book</code> ob'ektlari mavjud edi. Tasavvur qiling avtorni bir
-                nechta kitoblari bo'lishi mumkin. Bu munosabatlar uchun "Fetch strategy" ni qanday qo'llanishini ko'rib
-                chiqamiz.</p>
-            <br>
-            <pre class="code_pre"><code class="code_code java" data-highlight="true">@Entity
-public class Author {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String name;
-
-    @OneToMany(mappedBy = "author", fetch = FetchType.LAZY) // Lazy fetch strategy
-    private List&lt;Book&gt; books = new ArrayList&lt;&gt;();
-        // getters and setters
-        }
-
-@Entity
-public class Book {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String title;
-
-    @ManyToOne(fetch = FetchType.EAGER) // Eager fetch strategy
-    @JoinColumn(name = "author_id")
-    private Author author;
-        // getters and setters
-}</code></pre>
-            <p>Ushbu misolda <code>Author</code> va <code>Book</code> obektlar uchun "Fetch strategy" ni qo'lladik. Xo'sh endi
-                natija qanday bo'ladi:
-        <li data-selectable-paragraph="">Bizda <code>Author</code> ob'ekti <code>Book</code> ob'ekti bilan birga ko'p
-            munosabatga ega va shuning uchun biz <code>books</code>
-            to'plamni olib kelish uchun <code>FetchType.LAZY</code> dan foydalandik. Bu shuni bildiradiki
-            <code>books</code> toplam undan foydalanmagunimizcha
-            malumotlar bazasidan yuklanmaydi.
-        </li>
-        <li data-selectable-paragraph=""><code>Book</code> ob'ekti esa <code>Author</code> ob'ekti bilan ko'pga bir
-            munosabatda bog'langan va
-            shuning uchun biz bunga <code>author</code> ni olib kelish uchun <code>FetchType.EAGER</code> ni qo'lladik.
-            Bunda <code>Book</code>
-            ob'ekti yuklanganda unga bog'langan <code>Author</code> ob'ekti ham darhol yuklanadi.
-        </li>
-        <p>Esda tutish kerakki, to'g'ri "Fetch strategy" ni tanlash ilovangiz talablari va foydalanish usullariga bog'liq.
-            Agar <code>Fetch strategy</code>
-            noto'gri qo'llanilsa N+1 so'rovi muammolariga olib kelishi mumkin, bunda har bir tegishli ob'ekt alohida
-            ma'lumotlar bazasi so'rovini ishga tushiradi.
-            Ilovangizdan foydalanish holatlarini tahlil qilish va shunga mos ravishda mos "Fetch strategy" ni tanlash
-            muhimdir.</p>
-        <br>
-
-        <h1>3.<strong>Caching:</strong></h1>
-        <p>Keshlash</p>
-        <br>
-        <p>Keshlash ma'lumotlar bazasiga so'rovlar sonini kamaytirish va javob vaqtlarini oshirish orqali ilovamizning
-            ish
-            faoliyatini sezilarli darajada yaxshilashi mumkin.</p>
-        <li id="520b" data-selectable-paragraph="">Tez-tez kiriladigan ma'lumotlarni xotirada saqlash uchun Spring Cache
-            yoki Ehcache yoki
-            Caffeine kabi keshlash yechimlari mavjud, bu esa ma'lumotlar bazasiga kirishni kamaytiradi.
-        </li>
-        <li id="7494" data-selectable-paragraph="">Seanslar bo'ylab ma'lumotlarni keshlash uchun ikkinchi darajali
-            keshlashdan foydalaning.
-            Spring Boot turli keshlash provayderlarini qo'llab-quvvatlaydi.
-        </li>
-        <br>
-        <p>Keling, Spring Boot JPA-da keshlashni batafsil namunalar yordamida ko'rib chiqaylik:</p>
-        <p><em>1. Keshdan malumotni olib tashlash:</em></p>
-        <p>Keshlangan ma'lumotlar vaqt o'tishi bilan tabiyki eskirishi mumkin. Buni hal qilish uchun Spring maxsus
-            annotatsiyani taqdim etadi <code>@CacheEvict</code>
-            bu ma'lum shartlar bajarilganda keshdan elementlarni olib tashlash uchun foydalanishimiz mumkin.</p>
-        <br>
-        <pre class="code_pre"><code class="code_code java" data-highlight="true">import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.stereotype.Service;
-
-@Service
-public class ProductService {
-
-    @Cacheable("products")                 // Simulate fetching data from the database
-    public Product getProductById(Long productId) {
-    return databaseService.fetchProductById(productId);
-        }
-
-    @CacheEvict(value = "products", key = "#productId")     // Simulate updating data in the database
-    public void updateProduct(Long productId, Product updatedProduct) {
-    databaseService.updateProduct(productId, updatedProduct);
-        }
-    }</code></pre>
-        <p>Ushbu namunada updateProduct metodi <code>@CacheEvict</code> bilan belgilangan .Bu shuni anglatadiki, ushbu metod
-            chaqirilganda, "products"
-            keshidagi tegishli key bilan belgilangan element o'chiriladi.
-        </p>
-        <p><em>2.Keshdagi elementni o'chirib yubormasdan turib yangilash:</em></p>
-        <p>Agar malumotlar bazasida biron element yangilansa uni keshda qayta yuklamasadan turib yangilashni hohlasak <code>@CachePut</code>
-            anotatsiyasidan foydalanishimiz mumkin. Bu anotatsiya keshlangan ma'lumotlarni yangilashni, shuningdek
-            yangilangan ma'lumotlarni qaytarishni xohlaganimizda foydalidir.</p>
-        <br>
-        <pre class="code_pre"><code class="code_code java" data-highlight="true">import org.springframework.cache.annotation.CachePut;
-import org.springframework.stereotype.Service;
-
-@Service
-public class ProductService {
-
-    @CachePut(value = "products", key = "#productId")     // Simulate updating data in the database
-    public Product updateProduct(Long productId, Product updatedProduct) {
-    databaseService.updateProduct(productId, updatedProduct);
-    return updatedProduct;
-        }
-     }</code></pre>
-        <p>Ushbu namunada, updateProduct metod ma'lumotlar bazasidagi ma'lumotlarni yangilaydi va huddi shu keydagi
-            elementni keshdagi xotirada ham yangilaydi.</p>
-        <br>
-        <h1><strong>4.Query Optimization:</strong></h1>
-        <p>So'rovlarni optimallashtirish</p>
-        <br>
-        <p>Bilamizki Spring Boot da JPA dan foydalanganimizda, ma'lumotlar bazasi bilan o'zaro ishlash uchun Java kodini
-            yozamiz va JPA
-            asosiy ma'lumotlar bazasini boshqarish uchun ushbu Java kodlarini SQL so'rovlariga tarjima qiladi.
-            So'rovlarni optimallashtirish ushbu yaratilgan SQL so'rovlarining samarali bo'lishini ta'minlash, ma'lumotlar
-            bazasi yukini
-            kamaytirish va tezroq javob berish vaqtini ta'minlash uchun muhim ahamiyatga ega.
-        </p>
-        <li id="7495" data-selectable-paragraph="">Faqat kerakli malumotlarini oladigan JPQL so'rovlarni yozing. Hamma
-            malumotlarni olishdan saqlaning.
-            (<code>SELECT *</code>)
-        <li id="7496" data-selectable-paragraph="">Faqat kerakli maydonlarni olish uchun tegishli proyeksiyalardan
-            foydalaning.
-            (masalan <code>SELECT NEW</code> yoki DTO proyeksiyalari)
-            <br></br>
-            <p>Spring Boot da Jpa so'rovlarini optimallashtirishga oddiy namuna ko'rsak:</p>
-            <p>Keling, oddiyroq holatni ko'rib chiqaylik. Bizda mahsulotlarni ifodalovchi <code>Product</code> ob'ekti
-                mavjud.
-                Har bir mahsulotning id, nomi, narxi va tipi mavjud. Shuningdek, bizda Spring Data JPA tomonidan taqdim
-                etilgan <code>JpaRepository</code>
-                interfeysidan nasil olgan <code>ProductRepository</code> interfeysi mavjud.
-
-            <p>Aytaylik, biz ma'lum bir narx oralig'idagi mahsulotlar ro'yxatini olishni xohlaymiz. Istalgan narx oralig'ida
-                mahsulotlarni oladigan so'rov
-                metodini yaratish uchun Spring Data JPA metod nomlash konventsiyalaridan foydalanishimiz mumkin. Bunda
-                Spring Data JPA avtomatik ravishda metod
-                nomi asosida tegishli SQL so'rovini yaratadi.</p>
-            <br>
-            <pre class="code_pre"><code class="code_code java" data-highlight="true">import org.springframework.data.jpa.repository.JpaRepository;
-import java.util.List;
-
-interface ProductRepository extends JpaRepository&lt;Product, Long&gt; {
-    List&lt;Product&gt; findByPriceBetween(double minPrice, double maxPrice);
-   }</code></pre>
-            <p>Ushbu misoldagi, <code>findByPriceBetween</code> metodi narxi ma'lum oraliqda bo'lgan mahsulotlarni olish
-                uchun
-                ishlatiladi.
-                Spring Data JPA ushbu metod uchun optimallashtirilgan SQL so'rovini yaratadi.</p>
-            <br>
-            <h1><strong>5. Use Pagination &amp; Sorting:</strong></h1>
-            <p>Sahifalash va saralashdan foydalanish</p>
-            <br>
-            <p>Sahifalash va saralash so'rovdan olingan natijalar miqdorini cheklash va ularni muayyan standartlarga muvofiq
-                tartibga
-                solish uchun qo'llaniladigan usuldir. Spring Data JPA yordamida ushbu usuldan <code>Pageable</code>
-                interfeysi
-                orqali foydalanishimiz mumkin. Ushbu interfeys har bir sahifaning o'lchamini, saralash mezonlarini va
-                kerakli
-                sahifaning sonini aniqlash imkonini beradi.</p>
-            <p>Spring Data JPA da sahifalash va saralashdan foydalanish uchun avval sahifa hajmi, saralash mezonlari va
-                sahifa raqamini
-                o'z ichiga olgan Pageable ob'ektni yaratishimiz kerak . Mana bir misol:</p>
-            <br>
-            <pre class="code_pre"><code class="code_code java" data-highlight="true">Pageable pageable = PageRequest.of(pageNumber, pageSize, Sort.by(sortBy).descending());</code></pre>
-            <p>Bu misolda <code>pageNumber</code> joriy sahifa raqami, <code>pageSize</code> har bir sahifaga qaytariladigan
-                natijalar soni va <code>sortBy</code>
-                kamayish tartibida saralanadigan maydon.
-            </p>
-            <p>Pageable ob'ektini yaratganimizdan so'ng, malumotlar bazasiga so'rov yuborib natijani olishimiz mumkin.
-                Bunga bir namuna ko'rsak:
-            </p>
-            <br>
-            <pre class="code_pre"><code class="code_code java" data-highlight="true">public Page&lt;Product&gt; findProducts(String keyword, Pageable pageable) {
-        return productRepository.findByName(keyword, pageable);
-        }</code></pre>
-            <p>Ushbu misolda <code>findByName</code> metodi mahsulotlarni nomi bo'yicha qidirish uchun ishlatiladi.</p>
-            <p>Sahifalash va saralashdan foydalanish Spring Data JPA ilovasining ishlashini sezilarli darajada yaxshilaydi,
-                ayniqsa katta ma'lumotlar
-                to'plamlari bilan ishlashda. So‘rov orqali qaytariladigan natijalar sonini cheklash va ularni ma’lum
-                mezonlar asosida saralash orqali
-                siz ma’lumotlar bazasi tomonidan qayta ishlanishi va qaytarilishi kerak bo‘lgan ma’lumotlar miqdorini
-                kamaytirishingiz mumkin, natijada
-                javob vaqtlari tezlashadi va ishlash yaxshilanadi.</p>
-            <br>
-            <h1><strong>6.Read-Only Operations:</strong></h1>
-            <p>Faqat o'qish uchun tranzaksiyalar</p>
-            <br>
-            <p>Keraksiz tranzaksiya bilan bog'liq qo'shimcha operatsiyalarni chetlab o'tib,
-                ma'lumotlar bazasi ish faoliyatini yaxshilash uchun faqat o'qish uchun tranzaktsiyalarni belgilash. Buning
-                uchun
-                <code>@Transactional(readOnly = true)</code> anotatsiyasidan foydalanish mumkin.
-            </p>
-            <br>
-            <pre class="code_pre"><code class="code_code java" data-highlight="true">@Service
-@Transactional(readOnly = true)
-public class OrderService {
-
-    @Autowired
-    private OrderRepository orderRepository;
-
-    public List&lt;Order&gt; getOrdersByStatus(OrderStatus status) {
-    return orderRepository.findOrdersByStatus(status);
-        }
-    }</code></pre>
-            <br>
-            <h1><strong>7. Batch Operations:</strong></h1>
-            <p>Ommaviy operatsiyalar</p>
-            <br>
-            Biz malumotlar bazasiga bir nechta malumotlarni ya'ni to'plamni birdaniga qo'shmoqchi bo'lsak yoki to'plamni
-            o'chirish
-            yoki to'plam malumotlarini o'zgartirmoqchi bo'lsak bu operatsiyalarni alohida alohida emas balki birdaniga
-            bajarish bizga kod samaradorligini oshirishga yordam beradi.
-            Spring Data JPA <code>saveAll()</code> va <code>deleteAllInBatch()</code> metodlari orqali ommaviy
-            operatsiyalarni qo'llab-quvvatlaydi.
-            <br></br>
-            <pre class="code_pre"><code class="code_code java" data-highlight="true">@Service
-public class OrderService {
-
-    @Autowired
-    private OrderRepository orderRepository;
-
-    public List&lt;Order&gt; saveOrders(List&lt;Order&gt; orders) {
-    return orderRepository.saveAll(orders);
-         }
-     }</code></pre>
-            <br>
-            <h1><strong>8.Avoid N+1 Query Problem:</strong></h1>
-            <p>N+1 so'rov muammosidan qochish</p>
-            <br>
-            <p>N+1 so'rov muammosi - bu relyatsion ma'lumotlar bazasidan ma'lumotlarni olish uchun Spring Boot da JPA kabi
-                (ORM) texnologiyasidan foydalanganda yuzaga keladigan keng tarqalgan ishlash muammosi.
-                Ushbu muammo ob'ektlar to'plamini olganingizda paydo bo'ladi va har bir ob'ekt uchun tegishli ma'lumotlarga
-                kirish uchun ORM har bir ob'ekt uchun qo'shimcha so'rovlarni yaratadi. Bu ma'lumotlar bazasi so'rovlari sonining
-                sezilarli darajada ko'payishiga olib keladi, natijada samaradorlik tushib ketadi va ma'lumotlar bazasi serveriga yuk ko'payadi.</p>
-            <p>Bunga ham bir namuna ko'rsak:</p>
-            <p>Bizda ikkita ob'ekt bor: <code>Author</code> va <code>Book</code>.
-                Bu erda muallif bir nechta kitobga ega bo'lishi mumkin va ular o'zaro birga ko'p munosabatda bog'lanadi.
-            </p>
-            <br>
-            <pre class="code_pre"><code class="code_code java" data-highlight="true">@Entity
-public class Author {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String name;
-    // Other fields, getters, setters...
-   }
-
-@Entity
-public class Book {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String title;
-    @ManyToOne
-    @JoinColumn(name = "author_id")
-    private Author author;
-    // Other fields, getters, setters...
-   }</code></pre>
-            <p><strong>Muammo:- </strong>Aytaylik, biz mualliflar ro'yxatini kitoblari bilan birga olishni xohlaymiz.
-                Agar biz mualliflarni olib, keyin ularning kitoblariga kirish uchun ularni aylanib chiqsak,
-                JPA har bir muallifning kitobi uchun alohida so‘rovlar yaratishi mumkin. Natijada
-                muallifni olish uchun bitta so'rov va ularning tegishli kitoblarini olish uchun N so'rov yuborilishi kerak.
-                Shu payt bizda "N+1" so'rov muammosi yuzaga keladi.</p>
-
-            <p><strong>Yechim:- </strong> N+1 so‘rov muammosini oldini olish uchun biz <code>Eager</code>(ishtiyoqli) yoki <code>Lazy</code>(dangasa)  yuklash
-                tushunchasidan foydalanishimiz mumkin. Odatda, JPA o'zaro munosabatlar uchun <code>Lazy</code>(dangasa) yuklashdan foydalanadi.
-                Dangasa yuklash, tegishli ob'ektlar ma'lumotlar bazasidan faqat biz ularga aniq kirganimizda yuklanishini bildiradi.
-                Tegishli ob'ektlarni <code>Eager</code>(ishtiyoqli) bilan yuklash uchun biz <code>@OneToMany(fetch = FetchType.EAGER)</code> anotatsiyasidan foydalanishimiz mumkin.
-            </p>
-            <p>Biroq, <code>Eager</code>(ishtiyoqli) bilan yuklash har doim ham eng yaxshi variant bo'lmasligi mumkin, chunki bu boshqa ishlash muammolariga olib kelishi mumkin,
-                masalan, kerak bo'lgandan ko'proq ma'lumotlarni yuklash. Muqobil variant - bitta so'rovda kerakli ma'lumotlarni olish uchun <code>join</code>
-                orqali aniq so'rovlardan foydalanishdir.</p>
-            <p><strong>Eager yuklashdan foydalanish:</strong></p>
-            <br>
-            <pre class="code_pre"><code class="code_code java" data-highlight="true">@Entity
-public class Author {
-    // ...
-    @OneToMany(mappedBy = "author", fetch = FetchType.EAGER)
-    private List&lt;Book&gt; books;
-    // ...
-   }</code></pre>
-            <p><strong>Join Fetch so'rovidan foydalanish:</strong></p>
-            <pre class="code_pre"><code class="code_code java" data-highlight="true">@Repository
-public interface AuthorRepository extends JpaRepository&lt;Author, Long&gt; {
-    @Query("SELECT DISTINCT a FROM Author a JOIN FETCH a.books")
-    List&lt;Author&gt; findAllWithBooks();
-   }</code></pre>
-            <p>Ushbu so'rovda <code>JOIN FETCH</code> mualliflar kitoblari bilan birga bitta so'rovda olinishini ta'minlaydi.</p>
-            <p>N+1 so'rovlar muammosini hal qilish orqali siz ma'lumotlar bazasi so'rovlari sonini kamaytirish va ma'lumotlar
-                bazasi serveriga yukni kamaytirish orqali Spring Boot JPA ilovalaringiz ish faoliyatini sezilarli darajada
-                yaxshilashingiz mumkin.</p>
-            <br>
-            <br>
-            <p>Xulosa qilib aytadigan bo'lsak ma'lumotlar bazasi bilan o'zaro ishlash uchun Spring Data JPA-dan foydalanilganda, resurslardan samarali
-                foydalanish, so'rov vaqtlarini kamaytirish va samaraliroq ishlashini ta'minlash uchun optimal darajada to'g'ri yechim qilish muhimdir.</p>
-            <p>Keyingi maqolalarda ko'rishguncha &#x1F44B</p>
-            <br>
-            <br>
-            <br>
-            <br>
+&lt;div class="marginTest"&gt;
+    &lt;p&gt; Bu div elementi va u quyudagi margin qiymatariga ega&lt;/p&gt;
+    &lt;p&gt; margin-top: 50;&lt;/p&gt;
+    &lt;p&gt; margin-bottom: 120px;&lt;/p&gt;
+    &lt;p&gt; margin-right: 150px;&lt;/p&gt;
+    &lt;p&gt; margin-left: 80px;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+        <a class="code_pre_open_in_new"
+           href="../../compile/d4f5a59c-e51c-11ea-8bce-fc15b4289200" target="_blank" rel="noopener">To'liq ko'd va
+            natijani ko'rish <i class="fa-solid fa-angles-right"></i></a>
     </div>
+
+    <br>
+    <p>Natija</p>
+    <div style="background-color: #33e684; border: 1px solid black; margin: 50px 150px 120px 80px;">
+        <p>Bu div elementi va u quyudagi margin qiymatariga ega</p>
+        <p>margin-top: 50;</p>
+        <p>margin-bottom: 120px;</p>
+        <p>margin-right: 150px;</p>
+        <p>margin-left: 80px;</p>
+    </div>
+    <p><a href="../../compile/ce75f670-c6d8-11ea-b2c3-fc15b4289200" target="_blank" rel="noopener">To'lik ko'd va
+        natijani ko'rish &gt;&gt;&nbsp;</a></p>
+    <p>&nbsp;</p>
+    <p>Elementning har tomoniga alohida margin qiymat yozib o'tirmasdan&nbsp;<span style="background-color: #c2e0f4;"> margin&nbsp; </span>qisqacha
+        yozish usulidan foydalansak bo'ladi.&nbsp;</p>
+    <p><span style="background-color: #c2e0f4;">&nbsp;margin&nbsp;</span> xususiyatini qisqacha yozish usuli hisoblanib
+        quyidagi&nbsp; xususiyatlarni bittada qisqacha yozishimiz mumkin:</p>
+    <ul>
+        <li>margin-top</li>
+        <li>margin-right</li>
+        <li>margin-bottom</li>
+        <li>margin-right</li>
+    </ul>
+    <p>&nbsp;</p>
+    <p>Sintaksis</p>
+    <pre style="background: #eee; border: 1px solid #d6d6d6; padding: 7px; border-radius: 5px;"> margin: top  right  bottom  left;</pre>
+    <p>&nbsp;</p>
+    <p>Sitaksis O'zbekcha</p>
+    <pre style="background: #eee; border: 1px solid #d6d6d6; padding: 7px; border-radius: 5px;"> margin: tepa  o'ng  past chap;</pre>
+    <p>Ahamiyat bering birinchi tepa&nbsp; keyin o'ng, past, chap tomonlar yoziladi. Ya'ni soat ko'rsatgichi qanday
+        aylanadi ? U o'ngdan chapga aylanadi. tepa (12), o'ng (3), past (6), chap (9).<br><span
+                style="background-color: #c2e0f4;">&nbsp;margin&nbsp;</span> xususiyatlari qiymatlari joylashishi ham
+        soat ko'rsatgichi aylanishi bo'ylab.&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>Namuna</p>
+    <pre style="background: #eee; border: 1px solid #d6d6d6; padding: 7px; border-radius: 5px;"> margin: 10px 50px 75px 90px;</pre>
+    <p>&nbsp;Namunada qisqacha yozilgan. Agar uni to'liqroq qilib yozadigan bo'lsak quyidagi ko'rinishga ega
+        bo'ladi.</p>
+    <ul>
+        <li>margin-top: 10px;</li>
+        <li>margin-right: 50px;</li>
+        <li>margin-bottom: 75px;</li>
+        <li>margin-right: 90px;</li>
+    </ul>
+    <p>&nbsp;</p>
+    <p>Dasturiy namuna</p>
+    <pre><code class="htmlmixed hljs scss" data-highlight="true"> <span class="hljs-attribute">margin</span>: <span
+            class="hljs-number">10px</span> <span class="hljs-number">50px</span> <span class="hljs-number">75px</span> <span
+            class="hljs-number">90px</span>;
+</code></pre>
+    <p><a href="../../compile/8a70a8ca-c71a-11ea-9983-fc15b4289200" target="_blank" rel="noopener">To'liq ko'd va
+        natijani ko'rish uchun &gt;&gt;</a></p>
+    <p>&nbsp;</p>
+    <p><span style="font-size: 18pt;">Margin xususiyati 3ta qiymatda</span></p>
+    <p>margin xususiyatini qisqacha qilib 3ta qiymatda yozsak bo'ladi.</p>
+    <p>&nbsp;</p>
+    <p>Sintaksis</p>
+    <pre style="background: #eee; border: 1px solid #d6d6d6; padding: 7px; border-radius: 5px;"> margin: top right bottom;</pre>
+    <p>Ahamiyat bering bunda 3ta qiymat yozilgan. Ammo&nbsp; 4ta tomon ham qiymat oladi. Ular&nbsp; tepa, o'ng | chap,
+        past tomonlarni bildiradi.</p>
+    <p>&nbsp;</p>
+    <p>Namuna</p>
+    <pre style="background: #eee; border: 1px solid #d6d6d6; padding: 7px; border-radius: 5px;"> margin: 5px 25px 80px;</pre>
+    <p>Bunda&nbsp;</p>
+    <ul>
+        <li>margin-top: 5px</li>
+        <li>margin-right: 25px;</li>
+        <li>margin-bottom: 80px;</li>
+        <li>margin-left:25px;</li>
+    </ul>
+    <p>Izoh. Faqat 3ta tomon yozilgan bo'lsa ham 4ta tomon qiymat oladi.</p>
+    <p>&nbsp;</p>
+    <p>Dasturiy namuna</p>
+    <pre><code class="htmlmixed hljs scss" data-highlight="true"> <span class="hljs-attribute">margin</span>: <span
+            class="hljs-number">5px</span> <span class="hljs-number">25px</span> <span class="hljs-number">80px</span>;
+</code></pre>
+    <p><a href="../../compile/a30825a0-c71c-11ea-a7e7-fc15b4289200" target="_blank" rel="noopener">To'lik qo'd va
+        natijani ko'rish &gt;&gt;</a></p>
+    <p>&nbsp;</p>
+    <p><span style="font-size: 18pt;">Margin xususiyati 2ta qiymatda</span></p>
+    <p>Margin xususiyatini ikkita qiymatda berish mumkin. Bunda 4ta tamon ham nazarda tutiladi.</p>
+    <p>&nbsp;</p>
+    <p>Sintaksis</p>
+    <pre style="background: #eee; border: 1px solid #d6d6d6; padding: 7px; border-radius: 5px;"> margin: (top|bottom) (right|left);</pre>
+    <p>&nbsp;</p>
+    <p>Namuna</p>
+    <pre><code class="htmlmixed hljs scss" data-highlight="true"> <span class="hljs-attribute">margin</span>: <span
+            class="hljs-number">5px</span> <span class="hljs-number">10px</span>;
+</code></pre>
+    <p>Bunda</p>
+    <ul>
+        <li>margin-top: 5px;</li>
+        <li>margin-right: 10px;</li>
+        <li>margin-bottom: 5px;</li>
+        <li>margin-left:10px;</li>
+    </ul>
+    <p>Izox.&nbsp; <span style="background-color: #c2e0f4;">&nbsp;margin: (top|bottom)&nbsp; (right|left);&nbsp;</span>&nbsp;
+        qisqacha yozish da 2ta qiymat beriladi. 1chi qiymat tepa va past tomonlari uchundir, 2chi qiymat o'ng va chap
+        tomonlari uchundir</p>
+    <p>&nbsp;</p>
+    <p>Dasturiy Namuna</p>
+    <pre><code class="htmlmixed hljs scss" data-highlight="true">    <span class="hljs-attribute">margin</span>: <span
+            class="hljs-number">5px</span> <span class="hljs-number">10px</span>;
+</code></pre>
+    <p><a href="../../compile/4ef4b364-c71e-11ea-971e-fc15b4289200" target="_blank" rel="noopener">To'lik qo'd va
+        natijani ko'rish &gt;&gt;&nbsp;</a></p>
+    <p>&nbsp;</p>
+    <p><span
+            style="font-size: 18pt; background-color: unset; text-align: inherit; font-family: Roboto, 'Segoe UI', GeezaPro, 'DejaVu Serif', sans-serif, -apple-system, BlinkMacSystemFont;">Margin xususiyati 1ta qiymatda</span>
+    </p>
+    <p>Margin xususiyatini bitta qiymatda&nbsp; yozsak barcha tomonlar shu qiymatga ega bo'ladi. Barchasi bittada degan
+        tushincha.</p>
+    <p>&nbsp;</p>
+    <p>Sintaksis</p>
+    <pre style="background: #eee; border: 1px solid #d6d6d6; padding: 7px; border-radius: 5px;"> margin: barchaTamonlar;</pre>
+    <p>&nbsp;</p>
+    <p>Namuna</p>
+    <pre style="background: #eee; border: 1px solid #d6d6d6; padding: 7px; border-radius: 5px;"> margin: 5px;</pre>
+    <p>Bunda barcha tomonlar margin xususiyati 5px qiymatga ega. Ya'ni</p>
+    <ul>
+        <li>margin-top: 5px;</li>
+        <li>margin-right: 5px;</li>
+        <li>margin-bottom: 5px;</li>
+        <li>margin-left:5px;</li>
+    </ul>
+    <p>&nbsp;</p>
+    <p>Dasturiy namuna</p>
+    <pre><code class="htmlmixed hljs scss" data-highlight="true"> <span class="hljs-attribute">margin</span>: <span
+            class="hljs-number">5px</span>;
+</code></pre>
+    <p><a href="../../compile/cfc28d80-c71f-11ea-971e-fc15b4289200" target="_blank" rel="noopener">To'lik qo'd va
+        natijani ko'rish uchun &gt;&gt;</a></p>
+    <p>&nbsp;</p>
+    <p><span style="font-size: 18pt;">Margin Auto&nbsp;</span></p>
+    <p>Margin auto qiymatida brauser ni o'zi avtomatik ravishda hisoblaydi. Bu asosan elementni&nbsp; gorizantal o'rtaga
+        joylashtirish&nbsp; uchun ishlatiladi.&nbsp;</p>
+    <p>Element kerakli width ni oladi va qolgan bo'sh joy&nbsp; margin-left va margin-right larga teng miqdorda
+        taqsimlanib&nbsp; beriladi.</p>
+    <p>&nbsp;</p>
+    <p>Namuna</p>
+    <pre><code class="htmlmixed hljs css" data-highlight="true"> <span class="hljs-selector-class">.marginTest</span> {
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;
+            <span class="hljs-attribute">margin</span>: auto;
+            <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span
+                class="hljs-number">#33e684</span>;
+        }
+</code></pre>
+    <p><a href="../../compile/3a7ac298-c723-11ea-b1f0-fc15b4289200" target="_blank" rel="noopener">To'lik qo'd va
+        natijani ko'rish &gt;&gt;</a></p>
+    <p>&nbsp;</p>
+    <p><span style="font-size: 18pt;">Margin inherit qiymati</span></p>
+    <p>Inherit nasil olish deb tarjima qilinadi.</p>
+    <p>Ma'nosi shu elementning ota elementidan qandaydir&nbsp; xususiyat qiymatini o'zlashtirib oladi. Ya'ni ota
+        elementning margini&nbsp; kabi birxil bo'ladi.</p>
+    <p>margin-top, margin-right,margin-bottom,margin-left yokiy margin&nbsp; larning qiymatlari inherit bo'lishi
+        mumkin.</p>
+    <p>&nbsp;</p>
+    <p>Namuna</p>
+    <pre><code class="htmlmixed hljs css" data-highlight="true">        <span class="hljs-selector-tag">div</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">100px</span>;
+            <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span
+                class="hljs-number">#33e684</span>;
+        }
+
+        <span class="hljs-selector-tag">p</span> {
+            <span class="hljs-attribute">margin-left</span>: inherit;
+        }
+</code></pre>
+    <p><a href="../../compile/18f10a68-c725-11ea-b1f0-fc15b4289200" target="_blank" rel="noopener">To'lik qo'd va
+        natijani ko'rish &gt;&gt;</a></p>
+    <p>Izoh. p elementida&nbsp; &nbsp;<span style="background-color: #c2e0f4;">margin-left:</span>&nbsp; &nbsp;inherit
+        yozilgan. Bu degani elementning ota elementidan qiymatni ovolgin degani. Namunada p ning otasi div ekan. demak p
+        elementi&nbsp;<span style="background-color: #c2e0f4;"> margin-left&nbsp;</span> qiymatini div elementidan
+        o'zlashtirib oldi. Natijada p elementida ham&nbsp; <span style="background-color: #c2e0f4;">&nbsp;margin-left:100px;&nbsp;</span>
+        &nbsp;bo'ldi,</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
 </div>
-<script>document.addEventListener('DOMContentLoaded', (event) => {
+<script>    document.addEventListener('DOMContentLoaded', (event) => {
     document.querySelectorAll('pre code').forEach((el) => {
         hljs.highlightAll(el);
     });

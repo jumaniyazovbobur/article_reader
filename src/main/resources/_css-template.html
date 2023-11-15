@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Css New Style Template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css">
+    <style>
+        .code_pre {
+            border-radius: 6px;
+        }
+
+        .code_code {
+            padding-top: 10px;
+            padding-left: 10px
+        }
+
+        .code_pre_wrapper {
+            background-color: #e0e0e0;
+            padding: 15px 20px;
+            border-radius: 5px;
+        }
+
+        .code_pre_open_in_new {
+            text-decoration: none;
+            padding: 8px 25px;
+            background-color: #269864;
+            color: white;
+            border-radius: 7px;
+            border: none;
+
+        }
+
+        .code_pre_open_in_new:hover {
+            background-color: #1b7c50;
+            text-decoration: none;
+            color: white;
+        }
+
+        .code_pre_title {
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="container-fluid">
+    <br>
+    <h1 class="text-center">CSS Padding</h1>
+    <hr>
+    <br>
+
+    <p><code>padding</code> so'zini to'ldirish deb tarjima qilsak bo'ladi. Maqolada padding so'zini o'zini ishlatib
+        ketamiz.</p>
+
+
+    <p><span class="color_h1"><img class="e-rte-image e-imginline"
+                                   style="display: block; margin-left: auto; margin-right: auto;"
+                                   src="https://api.dasturjon.uz/api/v1/attach/image/2020-07-15-17-08-57.png" alt=""
+                                   width="445" height="270"></span></p>
+
+
+    <br>
+    <hr>
+    <h2>Padding alohida tomonlar uchun</h2>
+    <br>
+    <p><b>Sintaksis</b></p>
+    <pre style="background: #eee; border: 1px solid #d6d6d6; padding: 7px; border-radius: 5px;"> padding: barchaTamonlar;</pre>
+    <p>Css da elementning har bir tomoniga padding qiymat berish uchun xususiyatlar bor.&nbsp;</p>
+    <ul>
+        <li><code>&nbsp;padding-top </code>. tepa tomon padding qiymati</li>
+        <li><code>&nbsp;padding-right </code>. chap tomon padding qiymati.</li>
+        <li><code>&nbsp;padding-bottom </code>.&nbsp; past tomon padding qiymati.
+        </li>
+        <li><code>&nbsp;padding-left </code>. chap tomon padding qiymati</li>
+    </ul>
+    <p>&nbsp;</p>
+    <p>Barcha <code>padding</code>&nbsp; xususiyatlari quyidagi qiymatlarni olishi mumkin</p>
+    <ul>
+        <li>length - son korinishida qandaydir qiymat. Qiymat px,em,pt,rem va k.h lar ko'rinishida bo'lishi mumkin.</li>
+        <li>% -&nbsp; foiz ko'rinishidagi qiymati.</li>
+        <li>inherit -&nbsp; ( inherit nasil olish deb tarjima qilinadi). Ma'nosi shu elementning ota&nbsp; elementidan&nbsp;
+            qandaydir&nbsp; xususiyat qiymatini o'zlashtirib oladi. Ya'ni ota elementning padding kabi bir xil bo'ladi.&nbsp;
+        </li>
+    </ul>
+    <br>
+
+    <div class="code_pre_wrapper">
+        <h4 class="code_pre_title">Namuna</h4>
+        <pre class="code_pre"><code class="code_code css"
+                                    data-highlight="true">padding: 10px 50px 75px 90px;</code></pre>
+        <a class="code_pre_open_in_new"
+           href="../../compile/ca057624-c732-11ea-88c5-fc15b4289200" target="_blank" rel="noopener">To'liq ko'd va
+            natijani ko'rish <i class="fa-solid fa-angles-right"></i></a>
+    </div>
+
+    <br>
+    <p>Boshqa bitta namuna natijasi bilan birga</p>
+    <br>
+    <div class="code_pre_wrapper">
+        <h4 class="code_pre_title">Namuna</h4>
+        <pre class="code_pre"><code class="code_code css" data-highlight="true">div {
+    padding-top: 20px;
+    padding-bottom: 120px;
+    padding-right: 150px;
+    padding-left: 80px;
+    border: 1px solid black;
+    background-color: #33e684;
+}</code></pre>
+        <p>Natija:</p>
+        <div style="border: 1px solid black; background-color: white; padding: 20px 150px 120px 80px;">
+            <p>Bu divda quyidagi padding qiymatlari bor</p>
+            <p>padding-top: 20px;</p>
+            <p>padding-bottom: 120px;</p>
+            <p>padding-right: 150px;</p>
+            <p>padding-left: 80px;</p>
+        </div>
+        <br>
+        <a class="code_pre_open_in_new"
+           href="../../compile/6f795fb4-c731-11ea-ad01-fc15b4289200" target="_blank" rel="noopener">To'liq ko'd va
+            natijani ko'rish <i class="fa-solid fa-angles-right"></i></a>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div style="justify-content: center; display: flex;">
+        <table style="width: 80%;" class="table table-bordered  table-striped ">
+            <thead>
+            <tr>
+                <th>№</th>
+                <th>Method</th>
+                <th>Description (tariff)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="width: 4%">1</td>
+                <td style="width: 50%">
+                    public int <code>update</code>(String query)
+                </td>
+                <td> insert, update va delete query-lar uchun ishlatiladi.</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</div>
+
+</body>
+</html>
+
+<script>
+    // first, find all the div.code blocks
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre code').forEach((el) => {
+            hljs.highlightAll(el);
+        });
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>

@@ -1,23 +1,102 @@
-<html>
-<body>
-<p id="0435"
-   class="pw-post-body-paragraph lb lc ev ld b le lf lg lh li lj lk ll lm ln lo lp lq lr ls lt lu lv lw lx ly eo bj"
-   data-selectable-paragraph="">
+<div class="tl_page_wrap">
+    <div class="tl_page">
+        <main class="tl_article">
+            <header class="tl_article_header" dir="auto">
+                <h1>DRY Principle Of Software Development.</h1>
+                <address>
+                    <a rel="author">Elbek Eshkuvvatov</a><!--
+           -->
+                    <time datetime="2023-09-19T18:26:16+0000">September 19, 2023</time>
+                </address>
+            </header>
+            <article id="_tl_editor" class="tl_article_content ql-container ql-disabled">
+                <div class="ql-editor" contenteditable="false"><h1 dir="auto" data-placeholder="Title"
+                                                                   data-label="Title">DRY Principle Of Software
+                    Development.</h1>
+                    <address dir="auto" data-placeholder="Your name" data-label="Author">Elbek Eshkuvvatov</address>
+                    <p dir="auto"><br></p>
+                    <figure contenteditable="false">
+                        <div class="figure_wrapper"><img src="https://telegra.ph/file/e368b5f26599a371f698e.jpg"></div>
+                        <span class="cursor_wrapper" contenteditable="true"></span>
+                        <figcaption dir="auto" class="editable_text" data-placeholder="Caption (optional)">rasm
+                            chopilgan)
+                        </figcaption>
+                    </figure>
+                    <p dir="auto"><strong><em>Ushbu maqolada DRY prinsipi haqida gaplashamiz.</em></strong></p>
+                    <p dir="auto">DRY (Don’t Repeat Yourself) har qanday dasturiy ta'minotni ishlab chiqishda asosiy
+                        printsipdir. DRY prinsipi dasturiy ta'minotni ishlab chiqishda keraksiz takrorlangan kodlarni
+                        olib tashlashni ifodalaydi. Ushbu printsipga ko'ra, butun tizim buyicha har bir logika alohida
+                        funksiyada bo'lishi kerak .</p>
+                    <p dir="auto">Keling, DRY printsipi tomonidan taqdim etilgan foydali jihatlarini ko'rib
+                        chiqamiz.</p>
+                    <h3 dir="auto" id="Murakkablikni-kamaytirish">Murakkablikni kamaytirish</h3>
+                    <p dir="auto">Eng avvalo, u keraksiz takrorlanuvchi kodlardan qochish orqali murakkablikni
+                        kamaytiradi. Bu dasturchilar uchun kodni o'qish uchun yaxshi yozilgan, toza va tushunishga oson
+                        qiladi. Qo'shimchasiga u kodning barqarorligini ta'minlaydi, chunki kodga o'zgartirishlar
+                        kiritish yoki biron muommoni yechimi faqat 1ta joyda bajarilinadi natijasi esa shu funksiya
+                        chaqirilgan qismlarga ham ta'sir qiladi. </p>
+                    <h3 dir="auto" id="Takrorlangan-kodni-yo'q-qilish">Takrorlangan kodni yo'q qilish</h3>
+                    <p dir="auto">Dasturchilar tomonidan duplication dan qochish uchun qo'llaniladigan bir qancha
+                        usullari bor. Birinchidan, funktsiyalar yoki methodlarni ajratib olish o'xshash va
+                        takrorlanuvchi kod bloklarini qayta foydalanish mumkin bo'lgan funktsiyaga guruhlash imkonini
+                        beradi. </p>
+                    <h3 dir="auto" id="Funktsionallik-bo'yicha-guruhlash">Funktsionallik bo'yicha guruhlash</h3>
+                    <p dir="auto">Umumiy bog'liq funksiya/method ni ota class da 1 marta yozib voris olish orqali
+                        bolalarda ham foydalanish mumkin. </p>
+                    <h3 dir="auto" id="Kodni-qayta-ishlatish-imkoniyati">Kodni qayta ishlatish imkoniyati</h3>
+                    <p dir="auto">Va nihoyat, kutubxonalar, modullar yoki framework&nbsp;lardan foydalanish g'ildirakni
+                        qayta ixtiro qilib o'tirmasdan, ishlab chiquvchilar tomonidan allaqachon yozilgan va sinovdan
+                        o'tgan kodni qayta ishlatishga yordam beradi.</p>
+                    <p dir="auto"><br></p>
+                    <p dir="auto"><strong><em>Bilim olishdan to'xtamang!</em></strong></p>
+                    <p dir="auto"><strong><em>Bilim - bu sizning orzularingizga eshiklarni ochadigan
+                        kalit.</em></strong></p>
+                    <p dir="auto"><br></p>
+                    <p dir="auto"><strong>@elbekeshkuvvatov</strong></p>
+                    <p dir="auto"><strong> </strong></p>
+                    <p dir="auto"><br></p></div>
+                <div class="ql-clipboard" contenteditable="true" tabindex="-1"></div>
+                <div id="_tl_link_tooltip" class="tl_link_tooltip"></div>
+                <div id="_tl_tooltip" class="tl_tooltip">
+                    <div class="buttons">
+                        <span class="button_hover"></span>
+                        <span class="button_group"><!--
+             --><button id="_bold_button"></button><!--
+             --><button id="_italic_button"></button><!--
+             --><button id="_link_button"></button><!--
+           --></span><!--
+           --><span class="button_group"><!--
+             --><button id="_header_button"></button><!--
+             --><button id="_subheader_button"></button><!--
+             --><button id="_quote_button"></button><!--
+           --></span>
+                    </div>
+                    <div class="prompt">
+                        <span class="close"></span>
+                        <div class="prompt_input_wrap"><input type="url" class="prompt_input"></div>
+                    </div>
+                </div>
+                <div id="_tl_blocks" class="tl_blocks">
+                    <div class="buttons">
+                        <button id="_image_button"></button><!--
+           -->
+                        <button id="_embed_button"></button>
+                    </div>
+                </div>
+            </article>
 
-    <strong class="ld ew">Consistencyni</strong>
-    <strong class="ld ew">Atomicity</strong>
-    (<strong class="ld ew">Abortability</strong>)ga nima aloqasi bor? U qanday qilib
-    <strong class="ld ew">Atomicity</strong>ni mantiqiy davomi bo’lishi mumkin? Javob oddiy: <strong class="ld ew">Transaction</strong>
-    ichidagi operatsiyalardan istalgan biri
 
-    <strong class="ld ew">DB</strong> <strong class="ld ew">consistency</strong>ga
-    tahdid solsa, u holda u bilan birga bajarilishi kerak bo’lgan barcha operatsiyalar bekor qilinishga mahkum. Deylik,
-
-
-    <strong class="ld ew">PRODUCTS</strong> <strong class="ld ew">table</strong>’da <strong
-            class="ld ew">quantity</strong> <strong class="ld ew">column</strong> uchun <strong class="ld ew">validation
-        rule</strong> qo’yilgan: <strong class="ld ew">quantity</strong> 0(nol)dan kichik bo’lishi mumkin emas. Oldingi
-    maqolamizdagi <strong class="ld ew">DB</strong>ga quyidagi buyruqni berish orqali <strong
-            class="ld ew">quantity</strong>ga 0(nol)dan kichik bo’lmaslik shartini qo’yamiz:</p>
-</body>
-</html>
+            <aside class="tl_article_buttons">
+                <div class="account account_top"></div>
+                <button id="_edit_button" class="button edit_button">Edit</button><!--
+         -->
+                <button id="_publish_button" class="button publish_button">Publish</button>
+                <div class="account account_bottom"></div>
+                <div id="_error_msg" class="error_msg"></div>
+            </aside>
+        </main>
+    </div>
+    <div class="tl_page_footer tl_page_footer_visible">
+        <div id="_report_button" class="tl_footer_button">Report content on this page</div>
+    </div>
+</div>
