@@ -56,7 +56,7 @@ public class ArticleReader {
     }
 
     public static void writeToHtml(StringBuilder builder) throws IOException {
-        String output = readFromFile("template.html");
+        String output = readFromFile("_article_temp.html");
         Document doc = Jsoup.parse(output);
         Elements elements = doc.getElementsByClass("container-fluid");
         elements.html(builder.toString());
